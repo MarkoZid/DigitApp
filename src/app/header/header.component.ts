@@ -13,17 +13,7 @@ export class HeaderComponent {
     this.value = ((<HTMLInputElement>value.target).value )
     
   }
-  rating = new FormControl(0);
-  ratingcount = 0;
-  totalrating = 0;
-  finalRating: any;
-
-  getRating() {
-    this.ratingcount++;
-    this.totalrating += this.rating.value || 0;
-    this.finalRating = (this.totalrating / this.ratingcount).toFixed(2);
-  }
-
+  
 
 
 }
