@@ -2,12 +2,40 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <input type="string" [(ngModel)] = 'value'>
-                {{value}}
+                <li><button class="c-button c-button--gooey"> <a href="#">Home</a>
+                    <div class="c-button__blobs">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        </div>
+                
+                    </button></li>
+                    <li><button class="c-button c-button--gooey"> <a href="#">Destination</a>
+                        <div class="c-button__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            </div>
+                    
+                        </button></li>
+                        <li><button class="c-button c-button--gooey"> <a href="#">About</a>
+                            <div class="c-button__blobs">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                </div>
+                        
+                            </button></li>
+                            <li><button class="c-button c-button--gooey"> <a href="#">Contact</a>
+                                <div class="c-button__blobs">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    </div>
+                            
+                                </button></li>
+                <!--<input type="string" [(ngModel)] = 'value'>
+                {{value}}-->
             </ul>
         </nav>
         <div class="component-containter">
@@ -20,11 +48,26 @@
         
     </header>
 
-    <app-lista></app-lista>
+    <app-lista [search]="value"></app-lista>
     <footer>
         <p>&copy; 2023 Macedonia. All rights reserved.</p>
     </footer>
 </body>
 
 
-
+<button class="c-button c-button--gooey"> Hover me
+    <div class="c-button__blobs">
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+  </button>
+  <svg style="display: block; height: 0; width: 0;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur result="blur" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        <feColorMatrix result="goo" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" mode="matrix" in="blur"></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic"></feBlend>
+      </filter>
+    </defs>
+  </svg>
