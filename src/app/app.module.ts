@@ -14,8 +14,16 @@ import { MatInputModule } from '@angular/material/input';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { CarouselModule } from '@coreui/angular';
+
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, TripPlannerComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    TripPlannerComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
