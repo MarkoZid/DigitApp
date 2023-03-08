@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { CarouselModule } from '@coreui/angular';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CarouselModule } from '@coreui/angular';
     TripPlannerComponent,
     HeaderComponent,
     FooterComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
