@@ -12,7 +12,7 @@
   </mat-form-field>
   <br>
 	<main>
-		<section class="destination">
+		<section class="destination" *ngFor="let i of dataa">
 			<img src=".\assets\Cities\Bitola.jpg" alt="Destination 1">
 			<div class="destination-info">
 				<h2>{{i.lokacija}}</h2>
