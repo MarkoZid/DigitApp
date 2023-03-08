@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { CarouselModule } from '@coreui/angular';
 import { TestComponent } from './test/test.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TestComponent } from './test/test.component';
     HeaderComponent,
     FooterComponent,
     TestComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
