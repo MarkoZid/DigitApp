@@ -18,6 +18,7 @@ import { CarouselModule } from '@coreui/angular';
 import { TestComponent } from './test/test.component';
 import { PopupComponent } from './popup/popup.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SearchPipe } from './pipes/search.pipe';
     MatFormFieldModule,
     MatInputModule,
     CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

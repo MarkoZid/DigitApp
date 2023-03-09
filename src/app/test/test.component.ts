@@ -4,12 +4,15 @@ import { DataService } from '../data.service';
 
 
 
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent {
+
+  query:any
 
   dataa:any[]=[]
   constructor(private data:DataService){

@@ -3,16 +3,17 @@
 		<h1>Top Destinations</h1>
 	</header>
 	<span id="spacer"></span>
-  <mat-form-field id="search">
+  <!-- <mat-form-field id="search"> -->
+    
     <mat-label>Search a city</mat-label>
-    <input matInput type="text" />
-    <button matSuffix mat-icon-button>
+    <input [(ngModel)]="query">
+    <!-- <button matSuffix mat-icon-button>
       <mat-icon>search</mat-icon>
-    </button>
-  </mat-form-field>
+    </button> -->
+  <!-- </mat-form-field> -->
   <br>
 	<main>
-		<section class="destination" *ngFor="let i of dataa">
+		<section class="destination" *ngFor="let i of dataa | search :'lokacija':query">
 			<img src="{{i.img}}" alt="Destination 1">
 			<div class="destination-info">
 				<h2>{{i.lokacija}}</h2>
