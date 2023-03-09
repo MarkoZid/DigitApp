@@ -1,28 +1,82 @@
-.popup {
+.popup-overlay {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+  }
+  
+  .popup-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .popup-card {
+    position: relative;
+    z-index: 10000;
+    width: 80%;
+    max-height: 90%;
     background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    overflow: hidden;
   }
   
-  .popup h2 {
-    font-size: 24px;
-    margin-top: 0;
+  .popup-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
   }
   
-  .popup p {
-    margin-bottom: 20px;
+  .popup-card .card-header h3 {
+    margin: 0;
   }
   
-  .popup button {
-    background-color: #007bff;
-    color: white;
+  .popup-card .card-header button {
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    background: transparent;
+    font-size: 24px;
     cursor: pointer;
   }
   
+  .popup-card .card-image {
+    height: 200px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-card .card-image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .popup-card .card-text {
+    padding: 10px;
+  }
+  
+  .popup-card .card-text p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  p{
+    color: black;
+  }
+  h3{
+    color:black;
+  }

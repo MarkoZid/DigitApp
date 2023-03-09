@@ -3,6 +3,7 @@ import { DataService } from '../data.service';
 
 
 
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -16,8 +17,12 @@ export class TestComponent {
 
   }
 
-  ReadMore(){
-    
+  readMore(city: any){
+    city.showPopup = true;
+  }
+
+  hideCityPopup(city: any) {
+    city.showPopup = false;
   }
 
 }

@@ -1,5 +1,22 @@
-<div class="popup">
-    <h2>Popup Title</h2>
-    <p>Popup content goes here</p>
-    <!-- <button (click)="closePopup()">Close</button> -->
+<div class="popup-overlay">
+    <div class="popup-container">
+      <div class="card popup-card">
+        <div class="card-header">
+          <h3>{{title}}</h3>
+          <button (click)="hide()">X</button>
+        </div>
+        <div class="card-body popup-card-body" [style.max-height.px]="cardHeight">
+          <div class="card-image">
+            <img src="{{picture}}" alt="Card Image">
+          </div>
+          <div class="card-text">
+            <p>About</p>
+            <p>{{descripiton}}</p>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
   </div>
+  

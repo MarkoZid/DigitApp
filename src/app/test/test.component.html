@@ -13,13 +13,15 @@
   <br>
 	<main>
 		<section class="destination" *ngFor="let i of dataa">
-			<img src=".\assets\Cities\Bitola.jpg" alt="Destination 1">
+			<img src="{{i.img}}" alt="Destination 1">
 			<div class="destination-info">
 				<h2>{{i.lokacija}}</h2>
 				<p>Description of destination 1.</p>
-				<button (click)="ReadMore()"><a href="#">Read more</a></button>
+				<button (click)="readMore(i)">Read more</button> 
+                <app-popup *ngIf="i.showPopup" [descripiton]="i.desc" [picture]="i.img" [title]="i.lokacija"  (hidePopup)="hideCityPopup(i)"></app-popup>
 			</div>
 		</section>
+        
 
 
     </main>
