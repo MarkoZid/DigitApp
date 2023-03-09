@@ -1,29 +1,25 @@
 <body>
-	<header>
-		<h1>Top Destinations</h1>
-	</header>
-	<span id="spacer"></span>
-  <!-- <mat-form-field id="search"> -->
+    <header>
+        <h1>Top Destinations</h1>
+        <div id="search">
+          <mat-form-field appearance="fill">
+            <mat-icon matPrefix>search</mat-icon>
+            <mat-label>Search a city</mat-label>
+            <input matInput [(ngModel)]="query">
+          </mat-form-field>
+        </div>
+      </header>
     
-    <mat-label>Search a city</mat-label>
-    <input [(ngModel)]="query">
-    <!-- <button matSuffix mat-icon-button>
-      <mat-icon>search</mat-icon>
-    </button> -->
-  <!-- </mat-form-field> -->
-  <br>
-	<main>
-		<section class="destination" *ngFor="let i of dataa | search :'lokacija':query">
-			<img src="{{i.img}}" alt="Destination 1">
-			<div class="destination-info">
-				<h2>{{i.lokacija}}</h2>
-				<p>Description of destination 1.</p>
-				<button (click)="readMore(i)">Read more</button> 
-                <app-popup *ngIf="i.showPopup" [descripiton]="i.desc" [picture]="i.img" [title]="i.lokacija"  (hidePopup)="hideCityPopup(i)"></app-popup>
-			</div>
-		</section>
-        
-
-
+    <main>
+        <section class="destination" *ngFor="let i of dataa | search :'lokacija':query">
+            <img src="{{i.img}}" alt="Destination 1">
+            <div class="destination-info">
+                <h2>{{i.lokacija}}</h2>
+                <p>Description of destination 1.</p>
+                <button (click)="readMore(i)">Read more</button> 
+                <app-popup *ngIf="i.showPopup" [descripiton]="i.desc" [picture]="i.img" [title]="i.lokacija" (hidePopup)="hideCityPopup(i)"></app-popup>
+            </div>
+        </section>
     </main>
+    
 </body>
