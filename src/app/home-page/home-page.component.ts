@@ -19,42 +19,32 @@ export class HomePageComponent implements OnInit {
     this.slides[0] = {
       id: 0,
       src: './assets/Cities/Skopje.jpg',
-      title: 'First slide',
-      subtitle: 'Скопје',
+      title: 'Skopje',
+      // subtitle: 'Скопје',
     };
     this.slides[1] = {
       id: 1,
       src: './assets/Cities/Bitola.jpg',
-      title: 'Second slide',
-      subtitle: 'Битола',
+      title: 'Bitola',
+      // subtitle: 'Битола',
     };
     this.slides[2] = {
       id: 2,
       src: './assets/Cities/Ohrid.jpg',
-      title: 'Third slide',
-      subtitle:
-        'Охрид',
+      title: 'Ohrid',
+      // subtitle: 'Охрид',
     };
     this.slides[3] = {
       id: 3,
-      src: './assets/Cities/Ohrid3.jpg',
-      title: 'Fourth slide',
-      subtitle:
-        'Охрид',
+      src: './assets/Cities/Skopjeplostad.jpg',
+      title: 'Skopje',
+      // subtitle: 'Плоштад Скопје',
     };
     this.slides[4] = {
       id: 4,
-      src: './assets/Cities/Skopjeplostad.jpg',
-      title: 'Fifth slide',
-      subtitle:
-        'Плоштад Скопје',
-    };
-    this.slides[5] = {
-      id: 5,
       src: './assets/Cities/Kratovo.jpg',
-      title: 'Sixth slide',
-      subtitle:
-        'Кратово',
+      title: 'Kratovo',
+      // subtitle: 'Кратово',
     };
   }
 }
