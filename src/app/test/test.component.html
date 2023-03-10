@@ -15,7 +15,7 @@
             <img src="{{i.img}}" alt="Destination 1">
             <div class="destination-info">
                 <h2>{{i.lokacija}}</h2>
-                <p>Description of destination 1.</p>
+                <p></p>
                 <button (click)="readMore(i)">Read more</button> 
                 <app-popup *ngIf="i.showPopup" [descripiton]="i.desc" [picture]="i.img" [title]="i.lokacija" (hidePopup)="hideCityPopup(i)"></app-popup>
             </div>
