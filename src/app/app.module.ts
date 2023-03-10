@@ -19,6 +19,9 @@ import { TestComponent } from './test/test.component';
 import { PopupComponent } from './popup/popup.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
+import { Loader } from "@googlemaps/js-api-loader";
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     CarouselModule,
-    FormsModule
+    GoogleMapsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
