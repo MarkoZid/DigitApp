@@ -4,26 +4,26 @@ header {
     padding: 20px;
     text-align: center;
     }
-    
+
     h1 {
     margin: 0;
     }
-    
+
     #search {
     display: inline-block;
     margin-left: 20px;
     }
-    
+
     mat-form-field {
     width: 300px;
     }
-    
+
     main {
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
     }
-    
+
     .destination {
     position: relative;
     width: calc(33.33% - 20px); /* subtract margin from width to prevent wrapping */
@@ -31,13 +31,13 @@ header {
     box-sizing: border-box;
     padding: 10px;
     }
-    
+
     .destination img {
     height: 500px;
     object-fit: cover;
     width: 100%;
     }
-    
+
     .destination-info {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -51,17 +51,17 @@ header {
     justify-content: center;
     align-items: center;
     }
-    
+
     .destination-info h2 {
     font-size: 2em;
     margin-bottom: 10px;
     }
-    
+
     .destination-info p {
     font-size: 1.2em;
     margin-bottom: 20px;
     }
-    
+
     .destination-info a {
     background-color: #fff;
     color: #333;
@@ -71,8 +71,25 @@ header {
     text-transform: uppercase;
     transition: background-color 0.2s ease-in-out;
     }
-    
+
     .destination-info a:hover {
     background-color: #333;
     color: #fff;
     }
+
+.button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}

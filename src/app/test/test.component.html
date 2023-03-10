@@ -9,17 +9,17 @@
           </mat-form-field>
         </div>
       </header>
-    
+
     <main>
         <section class="destination" *ngFor="let i of dataa | search :'lokacija':query">
             <img src="{{i.img}}" alt="Destination 1">
             <div class="destination-info">
                 <h2>{{i.lokacija}}</h2>
                 <p></p>
-                <button (click)="readMore(i)">Read more</button> 
+                <button class="button" (click)="readMore(i)">Read more</button>
                 <app-popup *ngIf="i.showPopup" [descripiton]="i.desc" [picture]="i.img" [title]="i.lokacija" (hidePopup)="hideCityPopup(i)"></app-popup>
             </div>
         </section>
     </main>
-    
+
 </body>
