@@ -18,11 +18,12 @@ import { CarouselModule } from '@coreui/angular';
 import { TestComponent } from './test/test.component';
 import { PopupComponent } from './popup/popup.component';
 import { SearchPipe } from './pipes/search.pipe';
-import { FormsModule, NgControl } from '@angular/forms';
+import { FormsModule, NgControl, ReactiveFormsModule } from '@angular/forms';
 import { Loader } from '@googlemaps/js-api-loader';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -47,8 +48,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     CarouselModule,
     GoogleMapsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

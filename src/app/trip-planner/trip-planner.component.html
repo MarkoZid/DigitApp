@@ -2,13 +2,47 @@
 
 </google-map> -->
 
-<mat-form-field class="example-form-field" appearance="fill">
-  <mat-label>First campaign</mat-label>
-  <mat-date-range-input>
-    <input matStartDate placeholder="Start date" formControlName="start">
-    <input matEndDate placeholder="End date" formControlName="end">
-  </mat-date-range-input>
-  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-  <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
-  <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
-</mat-form-field>
+<div id="whole">
+  <mat-form-field id="date" appearance="fill">
+    <mat-label>First campaign</mat-label>
+    <mat-date-range-input [formGroup]="campaignOne" [rangePicker]="campaignOnePicker">
+      <input matStartDate placeholder="Start date" formControlName="start">
+      <input (dateChange)="dateGiven = true" matEndDate placeholder="End date" formControlName="end">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+  </mat-form-field>
+
+  <div id="filler">
+
+  </div>
+
+  <mat-button-toggle-group id="btnGroup" #group="matButtonToggleGroup" [(ngModel)]="selected">
+    <mat-button-toggle value="left" aria-label="Text align left">
+      <h1>Economy</h1>
+      <h2 *ngIf="dateGiven">{{ ecoPrice }}</h2>
+    </mat-button-toggle>
+    <mat-button-toggle value="center" aria-label="Text align center">
+      <h1>Premium economy</h1>
+      <h2 *ngIf="dateGiven">{{ midPrice }}</h2>
+    </mat-button-toggle>
+    <mat-button-toggle value="right" aria-label="Text align right">
+      <h1>First class</h1>
+      <h2 *ngIf="dateGiven">{{ firstPrice }}</h2>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <div id="infoStuff" *ngIf="selected != ''">
+    <div id="hotel" *ngFor="let h of hotel_data; index as i">
+      <img src="{{ h.img }}">
+      <div id="text">
+        <h1>{{ i + 1 }}. {{ h.name }}</h1>
+        <h2>MKD {{ h.price }} per night</h2>
+        <button mat-raised-button color="accent" (click)="goToUrl()">
+          Book
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
