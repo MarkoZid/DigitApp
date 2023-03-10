@@ -24,6 +24,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     TestComponent,
     PopupComponent,
     SearchPipe,
+    WeatherWidgetComponent,
   ],
   imports: [
     BrowserModule,
